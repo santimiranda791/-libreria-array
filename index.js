@@ -7,7 +7,7 @@ let libros=
             idioma: "Español",
             precio: 20.99,
             formato: "Tapa blanda",
-            isbn: "9788478884450",
+            isbnn: "9788478884450",
             descripcion: "La historia del niño que sobrevivió y su viaje en el mundo de la magia.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -24,7 +24,7 @@ let libros=
             idioma: "Español",
             precio: 25.99,
             formato: "Tapa dura",
-            isbn: "9788435017941",
+            isbnn: "9788435017941",
             descripcion: "La historia de la búsqueda del Anillo Único.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -41,7 +41,7 @@ let libros=
             idioma: "Español",
             precio: 18.99,
             formato: "Tapa blanda",
-            isbn: "9788435017958",
+            isbnn: "9788435017958",
             descripcion: "La historia de Bilbo Bolsón y su viaje con los enanos.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -58,7 +58,7 @@ let libros=
             idioma: "Español",
             precio: 22.99,
             formato: "Tapa dura",
-            isbn: "9788420467374",
+            isbnn: "9788420467374",
             descripcion: "La historia de la familia Buendía y su destino.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -75,7 +75,7 @@ let libros=
             idioma: "Español",
             precio: 15.99,
             formato: "Tapa blanda",
-            isbn: "9788478884450",
+            isbnn: "9788478884450",
             descripcion: "La historia de un joven pastor y su búsqueda de sueños.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -92,7 +92,7 @@ let libros=
             idioma: "Español",
             precio: 24.99,
             formato: "Tapa dura",
-            isbn: "9788408054447",
+            isbnn: "9788408054447",
             descripcion: "La historia de un joven que encuentra un libro misterioso.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -109,7 +109,7 @@ let libros=
             idioma: "Español",
             precio: 12.99,
             formato: "Tapa blanda",
-            isbn: "9788432040111",
+            isbnn: "9788432040111",
             descripcion: "La historia de un príncipe que viaja por el espacio.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -126,7 +126,7 @@ let libros=
             idioma: "Español",
             precio: 25.99,
             formato: "Tapa dura",
-            isbn: "9788420467381",
+            isbnn: "9788420467381",
             descripcion: "La historia de un amor que dura toda una vida.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -143,7 +143,7 @@ let libros=
             idioma: "Español",
             precio: 19.99,
             formato: "Tapa blanda",
-            isbn: "9788466655552",
+            isbnn: "9788466655552",
            descripcion: "La historia de un guerrero que debe salvar su reino.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -160,7 +160,7 @@ let libros=
             idioma: "Español",
             precio: 15.99,
             formato: "Tapa dura",
-            isbn: "9788420484187",
+            isbnn: "9788420484187",
             descripcion: "La historia de una niña que cae por un conejo y descubre un mundo extraño.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -177,7 +177,7 @@ let libros=
             idioma: "Español",
             precio: 22.99,
             formato: "Tapa dura",
-            isbn: "9788432240357",
+            isbnn: "9788432240357",
             descripcion: "La historia del millonario Jay Gatsby y su vida de lujos y excesos.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -194,7 +194,7 @@ let libros=
             idioma: "Español",
             precio: 21.99,
             formato: "Tapa blanda",
-            isbn: "9788435018128",
+            isbnn: "9788435018128",
             descripcion: "La historia de un capitán de barco y su obsesión con una ballena blanca.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -211,7 +211,7 @@ let libros=
             idioma: "Español",
             precio: 19.99,
             formato: "Tapa dura",
-            isbn: "9788499084565",
+            isbnn: "9788499084565",
             descripcion: "La historia de un viaje en un submarino a través de los mares del mundo.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -228,7 +228,7 @@ let libros=
             idioma: "Español",
             precio: 18.99,
             formato: "Tapa blanda",
-            isbn: "9788466655522",
+            isbnn: "9788466655522",
             descripcion: "La historia de un joven que busca un tesoro en una isla misteriosa.",
             estado: "Nuevo",
             ubicacion: "Librería Mágica",
@@ -245,7 +245,7 @@ let libros=
             idioma: "Español",
             precio: 19.99,
             formato: "Tapa blanda",
-            isbn: "9780007115617",
+            isbnn: "9780007115617",
             descripcion: "Cuatro niños descubren un mundo mágico detrás de un armario en una casa de campo.",
             estado: "Nuevo",
             ubicacion: "Librería Lewis",
@@ -262,7 +262,7 @@ let libros=
             idioma: "Español",
             precio: 16.99,
             formato: "Tapa blanda",
-            isbn: "9788491040541",
+            isbnn: "9788491040541",
             descripcion: "La compleja historia de amor entre Elizabeth Bennet y Mr. Darcy en la Inglaterra del siglo XIX.",
             estado: "Nuevo",
             ubicacion: "Librería Austen",
@@ -279,7 +279,7 @@ let libros=
             idioma: "Español",
             precio: 0, // Precio puede variar dependiendo de la edición
             formato: "Libro físico o digital",
-            isbn: "Varía dependiendo de la edición",
+            isbnn: "Varía dependiendo de la edición",
             descripcion: "En el distópico país de Panem, Katniss Everdeen se ofrece como voluntaria para participar en los Juegos del Hambre en lugar de su hermana menor.",
             estado: "Nuevo",
             ubicacion: "Librerías",
@@ -303,7 +303,7 @@ let libros=
             idioma: "Español (traducción)",
             precio: "Variable según la edición y vendedor",
             formato: "Tapa dura, tapa blanda, ebook, entre otros",
-            ISBN: "Depende de la edición",
+            isbnn: "Depende de la edición",
             descripcion: "La historia de Jean Valjean y su lucha por la redención en la Francia del siglo XIX.",
             estado: "Nuevo",
             ubicacion: "Disponible en librerías físicas y tiendas en línea",
@@ -320,7 +320,7 @@ let libros=
             idioma: "Español (traducción)",
             precio: "Variable según la edición y vendedor",
             formato: "Tapa dura, tapa blanda, ebook, entre otros",
-            ISBN: "Depende de la edición",
+            isbnn: "Depende de la edición",
             descripcion: "La historia de un estudiante llamado Raskólnikov que comete un asesinato y enfrenta las consecuencias psicológicas de sus acciones.",
             estado: "Nuevo",
             ubicacion: "Disponible en librerías físicas y tiendas en línea",
@@ -337,7 +337,7 @@ let libros=
             idioma: "Español",
             precio: "Variable según la edición y vendedor",
             formato: "Tapa dura, tapa blanda, ebook, entre otros",
-            ISBN: "Depende de la edición",
+            isbnn: "Depende de la edición",
             descripcion: "Una novela que desafía las convenciones narrativas tradicionales y presenta múltiples formas de lectura.",
             estado: "Nuevo",
             ubicacion: "Disponible en librerías físicas y tiendas en línea",
@@ -348,14 +348,14 @@ let libros=
             peso: "Depende del formato"
           }, 
 ]
-let nuevoLibro = {
+let nuevoLiibro = {
     titulo: "El Hijo del Hombre",
     autor: "Oliver Sacks",
     genero: "No ficción",
     idioma: "Español",
     precio: 25.99,
     formato: "Tapa dura",
-    isbn: "9788420467374",
+    isbnn: "9788420467374",
     descripcion: "La historia de un hombre que pierde la memoria y su lucha por recuperarla.",
     estado: "Nuevo",
     ubicacion: "Librería Mágica",
@@ -365,7 +365,67 @@ let nuevoLibro = {
     dimensiones: [14, 3, 22], // ancho x profundidad x altura
     peso: 450 // gramos
 };
-libros.push(nuevoLibro);
-let ultimoLibro = libros.pop();
-console.log(libros);
-libros.forEach((libros,index) => console.log(libros.titulo));
+libros.push(nuevoLiibro);
+let opcion = 0;
+do {
+    menu="Menú: \n \n";
+    menu+="1. Agregar libro \n"
+    menu+="2. Eliminar libro \n"
+    menu+="3. Mostrar libros \n"
+    menu+="4. Salir \n \n"
+    menu+="Elija una opcion"
+    opcion = parseInt(prompt(menu));
+    switch (opcion) {
+        case 1:
+            agregarLibro();
+            break;
+        case 2:
+            eliminarLibro();
+            break;
+        case 3:
+            mostrarLibros();
+            break;
+        case 4:
+            console.log("Adiós!");
+            break;
+        default:
+            console.log("Opción inválida. Intente de nuevo.");
+    }
+} while (opcion!== 4);
+function eliminarLibro() {
+    let tituloLibroEliminar = prompt("Ingrese el título del libro que desea eliminar: ");
+    for (let i = 0; i < libros.length; i++) {
+        if (libros[i].titulo === tituloLibroEliminar) {
+            libros.splice(i, 1);
+            console.log("Libro "+tituloLibroEliminar+ " eliminado con éxito!");
+            return console.log();
+        }
+    }
+    console.log(`No se encontró el libro "${tituloLibroEliminar}"`);
+}
+function agregarLibro() {
+    let nuevoLibro = {
+        titulo: prompt("Ingrese el título del libro: "),
+        autor: prompt("Ingrese el autor del libro: "),
+        genero: prompt("Ingrese el género del libro: "),
+        idioma: prompt("Ingrese el idioma del libro: "),
+        precio: parseFloat(prompt("Ingrese el precio del libro: ")),
+        formato: prompt("Ingrese el formato del libro: "),
+        isbnn: prompt("Ingrese el isbnn del libro: "),
+        descripcion: prompt("Ingrese la descripción del libro: "),
+        estado: prompt("Ingrese el estado del libro (nuevo/uso): "),
+        ubicacion: prompt("Ingrese la ubicación del libro: "),
+        fecha_publicacion: prompt("Ingrese la fecha de publicación del libro: "),
+        editorial: prompt("Ingrese la editorial del libro: "),
+        paginas: parseInt(prompt("Ingrese el número de páginas del libro: ")),
+        dimensiones: [parseInt(prompt("Ingrese el ancho del libro: ")), parseInt(prompt("Ingrese la profundidad del libro: ")), parseInt(prompt("Ingrese la altura del libro: "))],
+        peso: parseInt(prompt("Ingrese el peso del libro: "))
+    };
+    libros.push(nuevoLibro);
+    console.log("Libro agregado con éxito!");
+}
+function mostrarLibros() {
+    for (let i = 0; i < libros.length; i++) {
+        console.log(`Título: ${libros[i].titulo}\n Autor: ${libros[i].autor}\n Genero:${libros[i].genero}\n Idioma: ${libros[i].idioma}\n Precio: ${libros[i].precio}\n Formato: ${libros[i].formato}\n isbnn: ${libros[i].isbnn}\n Descripcion: ${libros[i].descripcion}\n Estado: ${libros[i].estado}\n Ubicacion ${libros[i].ubicacion}\n Fecha de publicacion ${libros[i].fecha_publicacion}\n Editorial: ${libros[i].editorial}\n Paginas: ${libros[i].paginas}\n Dimensiones${libros[i].dimensiones}\n Peso: ${libros[i].peso}`);
+    }
+}                                                                                                                                                                           
