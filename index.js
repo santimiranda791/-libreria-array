@@ -366,12 +366,12 @@ let nuevoLiibro = {
 libros.push(nuevoLiibro);
 let opcion = 0;
 do {
-    menu="Menú: \n \n";
-    menu+="1. Agregar libro \n"
-    menu+="2. Eliminar libro \n"
-    menu+="3. Mostrar libros \n"
-    menu+="4. Salir \n \n"
-    menu+="Elija una opcion"
+    menu = "Menú: \n \n";
+    menu += "1. Agregar libro \n"
+    menu += "2. Eliminar libro \n"
+    menu += "3. Mostrar libros \n"
+    menu += "4. Salir \n \n"
+    menu += "Elija una opcion"
     opcion = parseInt(prompt(menu));
     switch (opcion) {
         case 1:
@@ -389,18 +389,20 @@ do {
         default:
             console.log("Opción inválida. Intente de nuevo.");
     }
-} while (opcion!== 4);
+} while (opcion !== 4);
+
 function eliminarLibro() {
     let tituloLibroEliminar = prompt("Ingrese el título del libro que desea eliminar: ");
     for (let i = 0; i < libros.length; i++) {
         if (libros[i].titulo === tituloLibroEliminar) {
             libros.splice(i, 1);
-            console.log("Libro "+tituloLibroEliminar+ " eliminado con éxito!");
+            console.log("Libro " + tituloLibroEliminar + " eliminado con éxito!");
             return console.log();
         }
     }
     console.log(`No se encontró el libro "${tituloLibroEliminar}"`);
 }
+
 function agregarLibro() {
     let nuevoLibro = {
         titulo: prompt("Ingrese el título del libro: "),
@@ -422,11 +424,12 @@ function agregarLibro() {
     libros.push(nuevoLibro);
     console.log("Libro agregado con éxito!");
 }
+
 function mostrarLibros() {
     for (let i = 0; i < libros.length; i++) {
         console.log(`Título: ${libros[i].titulo}\n Autor: ${libros[i].autor}\n Genero:${libros[i].genero}\n Idioma: ${libros[i].idioma}\n Precio: ${libros[i].precio}\n Formato: ${libros[i].formato}\n isbnn: ${libros[i].isbnn}\n Descripcion: ${libros[i].descripcion}\n Estado: ${libros[i].estado}\n Ubicacion ${libros[i].ubicacion}\n Fecha de publicacion ${libros[i].fecha_publicacion}\n Editorial: ${libros[i].editorial}\n Paginas: ${libros[i].paginas}\n Dimensiones${libros[i].dimensiones}\n Peso: ${libros[i].peso}`);
     }
-}             
+}
 
 const mostrar = libros.map(libros => {
     return {
@@ -512,3 +515,18 @@ const descripcion = libros.map(libros => {
     }
 })
 console.table(descripcion)
+const descuento = libros.map(libros => {
+    return {
+        ...libros,
+        descuento: "20%"
+    }
+})
+
+const mostrardescuento = descuento.map(libros => {
+    return {
+        titulo: libros.titulo,
+        descripcion: libros.descripcion,
+        descuento: libros.descuento
+    }
+})
+console.table(mostrardescuento)
