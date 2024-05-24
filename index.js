@@ -181,7 +181,7 @@ let libros = [{
         ubicacion: "Librería Mágica",
         fecha_publicacion: "10 de abril de 1925",
         editorial: "Tirant Lo Blanch",
-        paginas: 160,
+        paginas: 60,
         dimensiones: [15, 3, 22], // ancho x profundidad x altura
         peso: 300 // gramos
     },
@@ -215,7 +215,7 @@ let libros = [{
         ubicacion: "Librería Mágica",
         fecha_publicacion: "20 de marzo de 1870",
         editorial: "Tirant Lo Blanch",
-        paginas: 240,
+        paginas: 90,
         dimensiones: [14, 2, 22], // ancho x profundidad x altura
         peso: 400 // gramos
     },
@@ -275,7 +275,7 @@ let libros = [{
         autor: "Suzanne Collins",
         genero: "Ciencia ficción, aventura",
         idioma: "Español",
-        precio: 0, // Precio puede variar dependiendo de la edición
+        precio: 12, // Precio puede variar dependiendo de la edición
         formato: "Libro físico o digital",
         isbnn: "Varía dependiendo de la edición",
         descripcion: "En el distópico país de Panem, Katniss Everdeen se ofrece como voluntaria para participar en los Juegos del Hambre en lugar de su hermana menor.",
@@ -299,7 +299,7 @@ let libros = [{
         autor: "Victor Hugo",
         genero: "Ficción, Novela histórica",
         idioma: "Español (traducción)",
-        precio: "91",
+        precio: 91,
         formato: "Tapa dura, tapa blanda, ebook, entre otros",
         isbnn: "Depende de la edición",
         descripcion: "La historia de Jean Valjean y su lucha por la redención en la Francia del siglo XIX.",
@@ -316,7 +316,7 @@ let libros = [{
         autor: "Fyodor Dostoevsky",
         genero: "Ficción, Novela psicológica",
         idioma: "Español (traducción)",
-        precio: "80",
+        precio: 80,
         formato: "Tapa dura, tapa blanda, ebook, entre otros",
         isbnn: "Depende de la edición",
         descripcion: "La historia de un estudiante llamado Raskólnikov que comete un asesinato y enfrenta las consecuencias psicológicas de sus acciones.",
@@ -333,7 +333,7 @@ let libros = [{
         autor: "Julio Cortázar",
         genero: "Ficción, Experimental",
         idioma: "Español",
-        precio: "100",
+        precio: 100,
         formato: "Tapa dura, tapa blanda, ebook, entre otros",
         isbnn: "Depende de la edición",
         descripcion: "Una novela que desafía las convenciones narrativas tradicionales y presenta múltiples formas de lectura.",
@@ -371,7 +371,8 @@ do {
     menu += "2. Eliminar libro \n"
     menu += "3. Mostrar libros \n"
     menu += "4. Listar libros \n"
-    menu += "5. Salir \n \n"
+    menu += "5. Organizacion libros \n"
+    menu += "6. Salir \n \n"
     menu += "Elija una opcion"
     opcion = parseInt(prompt(menu));
     switch (opcion) {
@@ -472,7 +473,7 @@ do {
                             peso: libros.peso
                         }
                     })
-                    
+
                     console.table(peso)
                     break;
                 case 8:
@@ -511,7 +512,7 @@ do {
                             descuento: "20%"
                         }
                     })
-                    
+
                     let mostrardescuento = descuento.map(libros => {
                         return {
                             titulo: libros.titulo,
@@ -527,13 +528,87 @@ do {
                     console.log("Elija un numero valido")
             }
             break;
-            case 5:{
-                    console.log("Hasta luego");
-                 break;
+        case 5:
+            menu2 = "Organizacion de libros \n\n"
+            menu2 += "1. Libros con precio mayor a 50 \n"
+            menu2 += "2. Libros con mas de 500 paginas de mayor a menor \n"
+            menu2 += "3. Libros con las paginas de mayor a menor \n"
+            menu2 += "4. Libros con precio mayor a 11 \n"
+            menu2 += "5. Libros con menos de 100 paginas \n"
+            menu2 += "6. Libros con precio mayor a 20 \n \n"
+            menu2 += "Elija una opcion"
+            opcion2 = parseInt(prompt(menu2))
+            switch (opcion2) {
+                case 1:
+                    let mayora50 = libros.filter(libros => {
+                        return libros.precio > 50
+                    })
+                    console.table(mayora50)
+                case 2:
+                    let librosorganizados = libros.map(libros => {
+                            return {
+                                titulo: libros.titulo,
+                                autor: libros.autor,
+                                editorial: libros.editorial,
+                                paginas: libros.paginas
+                            }
+                        })
+                        .filter(libros => {
+                            return libros.paginas > 500
+                        })
+                        .sort((a, b) => b.paginas - a.paginas)
+                    console.table(librosorganizados)
+                case 3:
+                    let paginasmayoramenor = libros.sort((a, b) => b.paginas - a.paginas)
+                    console.table(paginasmayoramenor)
+                case 4:
+                    let librosorganizadosprecio = libros.map(libros => {
+                            return {
+                                titulo: libros.titulo,
+                                autor: libros.autor,
+                                precio: libros.precio
+                            }
+                        })
+                        .filter(libros => {
+                            return libros.precio > 11
+                        })
+                    console.table(librosorganizadosprecio)
+                case 5:
+                    let librosorganizadospaginas = libros.map(libros => {
+                            return {
+                                titulo: libros.titulo,
+                                autor: libros.autor,
+                                editorial: libros.editorial,
+                                paginas: libros.paginas
+                            }
+                        })
+                        .filter(libros => {
+                            return libros.paginas < 100
+                        })
+                    console.table(librosorganizadospaginas)
+                case 6:
+                    let librosorganizadosmayor20 = libros.map(libros => {
+                            return {
+                                titulo: libros.titulo,
+                                autor: libros.autor,
+                                precio: libros.precio
+                            }
+                        })
+                        .filter(libros => {
+                            return libros.precio > 20
+                        })
+                    console.table(librosorganizadosmayor20)
             }
-            default:"Elija un numero valido"
+            break
+        case 6: {
+            console.log("Hasta luego");
+            break;
+        }
+        default:
+            "Elija un numero valido"
     }
-} while (opcion !== 5);
+} while (opcion !== 6);
+
 function eliminarLibro() {
     let tituloLibroEliminar = prompt("Ingrese el título del libro que desea eliminar: ");
     for (let i = 0; i < libros.length; i++) {
@@ -573,33 +648,13 @@ function mostrarLibros() {
         console.log(`Título: ${libros[i].titulo}\n Autor: ${libros[i].autor}\n Genero:${libros[i].genero}\n Idioma: ${libros[i].idioma}\n Precio: ${libros[i].precio}\n Formato: ${libros[i].formato}\n isbnn: ${libros[i].isbnn}\n Descripcion: ${libros[i].descripcion}\n Estado: ${libros[i].estado}\n Ubicacion ${libros[i].ubicacion}\n Fecha de publicacion ${libros[i].fecha_publicacion}\n Editorial: ${libros[i].editorial}\n Paginas: ${libros[i].paginas}\n Dimensiones${libros[i].dimensiones}\n Peso: ${libros[i].peso}`);
     }
 }
-let mayora50 = libros.filter(libros=>{
-    return libros.precio > 50
-  })
-  //console.table(mayora50)
-  let librosorganizados=libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        autor: libros.autor,
-        editorial: libros.editorial,
-        paginas: libros.paginas
-    }
-})
-.filter(libros=>{
-    return libros.paginas > 500
-  })
-.sort ((a,b)=>b.paginas-a.paginas ) 
-//console.table(librosorganizados)
-
-let paginasmayoramenor=libros.sort ((a,b)=>b.paginas-a.paginas ) 
-console.table(paginasmayoramenor)
-
-
-
-
-
-
-
-
-
-
+let librosorganizadospaginasmayor = libros.map(libros => {
+        return {
+            titulo: libros.titulo,
+            autor: libros.autor,
+            editorial: libros.editorial,
+            paginas: libros.paginas
+        }
+    })
+    .sort((a, b) => b.paginas - a.paginas)
+//console.table(librosorganizadospaginasmayor)
