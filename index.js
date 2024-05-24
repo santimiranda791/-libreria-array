@@ -283,7 +283,7 @@ let libros = [{
         ubicacion: "Librerías",
         fecha_publicacion: "2008",
         editorial: "Alianza",
-        paginas: "2000",
+        paginas: 2000,
         dimensiones: {
             ancho: "Varía",
             profundidad: "Varía",
@@ -307,7 +307,7 @@ let libros = [{
         ubicacion: "Disponible en librerías físicas y tiendas en línea",
         fechaDePublicacion: "Originalmente publicado en 1862",
         editorial: "Alianza",
-        paginas: "1500",
+        paginas: 1500,
         dimensiones: "Depende del formato",
         peso: "Depende del formato"
     },
@@ -324,7 +324,7 @@ let libros = [{
         ubicacion: "Disponible en librerías físicas y tiendas en línea",
         fechaDePublicacion: "Originalmente publicado en 1866",
         editorial: "Alianza",
-        paginas: "700",
+        paginas: 700,
         dimensiones: "Depende del formato",
         peso: "Depende del formato"
     },
@@ -341,7 +341,7 @@ let libros = [{
         ubicacion: "Disponible en librerías físicas y tiendas en línea",
         fechaDePublicacion: "Originalmente publicado en 1963",
         editorial: "Alianza",
-        paginas: "600",
+        paginas: 600,
         dimensiones: "Depende del formato",
         peso: "Depende del formato"
     },
@@ -590,6 +590,9 @@ let mayora50 = libros.filter(libros=>{
   })
 .sort ((a,b)=>b.paginas-a.paginas ) 
 //console.table(librosorganizados)
+
+let paginasmayoramenor=libros.sort ((a,b)=>b.paginas-a.paginas ) 
+console.table(paginasmayoramenor)
 
 
 
