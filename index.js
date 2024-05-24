@@ -283,7 +283,7 @@ let libros = [{
         ubicacion: "Librerías",
         fecha_publicacion: "2008",
         editorial: "Alianza",
-        paginas: "Varía dependiendo de la edición",
+        paginas: "2000",
         dimensiones: {
             ancho: "Varía",
             profundidad: "Varía",
@@ -299,7 +299,7 @@ let libros = [{
         autor: "Victor Hugo",
         genero: "Ficción, Novela histórica",
         idioma: "Español (traducción)",
-        precio: "Variable según la edición y vendedor",
+        precio: "91",
         formato: "Tapa dura, tapa blanda, ebook, entre otros",
         isbnn: "Depende de la edición",
         descripcion: "La historia de Jean Valjean y su lucha por la redención en la Francia del siglo XIX.",
@@ -307,7 +307,7 @@ let libros = [{
         ubicacion: "Disponible en librerías físicas y tiendas en línea",
         fechaDePublicacion: "Originalmente publicado en 1862",
         editorial: "Alianza",
-        paginas: "Varía según la edición, generalmente alrededor de 1500 páginas",
+        paginas: "1500",
         dimensiones: "Depende del formato",
         peso: "Depende del formato"
     },
@@ -316,7 +316,7 @@ let libros = [{
         autor: "Fyodor Dostoevsky",
         genero: "Ficción, Novela psicológica",
         idioma: "Español (traducción)",
-        precio: "Variable según la edición y vendedor",
+        precio: "80",
         formato: "Tapa dura, tapa blanda, ebook, entre otros",
         isbnn: "Depende de la edición",
         descripcion: "La historia de un estudiante llamado Raskólnikov que comete un asesinato y enfrenta las consecuencias psicológicas de sus acciones.",
@@ -324,7 +324,7 @@ let libros = [{
         ubicacion: "Disponible en librerías físicas y tiendas en línea",
         fechaDePublicacion: "Originalmente publicado en 1866",
         editorial: "Alianza",
-        paginas: "Varía según la edición, generalmente alrededor de 600 páginas",
+        paginas: "700",
         dimensiones: "Depende del formato",
         peso: "Depende del formato"
     },
@@ -333,7 +333,7 @@ let libros = [{
         autor: "Julio Cortázar",
         genero: "Ficción, Experimental",
         idioma: "Español",
-        precio: "Variable según la edición y vendedor",
+        precio: "100",
         formato: "Tapa dura, tapa blanda, ebook, entre otros",
         isbnn: "Depende de la edición",
         descripcion: "Una novela que desafía las convenciones narrativas tradicionales y presenta múltiples formas de lectura.",
@@ -341,7 +341,7 @@ let libros = [{
         ubicacion: "Disponible en librerías físicas y tiendas en línea",
         fechaDePublicacion: "Originalmente publicado en 1963",
         editorial: "Alianza",
-        paginas: "Varía según la edición, generalmente alrededor de 600 páginas",
+        paginas: "600",
         dimensiones: "Depende del formato",
         peso: "Depende del formato"
     },
@@ -370,7 +370,8 @@ do {
     menu += "1. Agregar libro \n"
     menu += "2. Eliminar libro \n"
     menu += "3. Mostrar libros \n"
-    menu += "4. Salir \n \n"
+    menu += "4. Listar libros \n"
+    menu += "5. Salir \n \n"
     menu += "Elija una opcion"
     opcion = parseInt(prompt(menu));
     switch (opcion) {
@@ -384,13 +385,155 @@ do {
             mostrarLibros();
             break;
         case 4:
-            console.log("Adiós!");
+            menu1 = "Lista de libros \n\n"
+            menu1 += "1. Titulo \n"
+            menu1 += "2. Autor \n"
+            menu1 += "3. Paginas \n"
+            menu1 += "4. Ubicacion \n"
+            menu1 += "5. Formato \n"
+            menu1 += "6. Fecha \n"
+            menu1 += "7. Peso \n"
+            menu1 += "8. Idioma \n"
+            menu1 += "9. Isbn \n"
+            menu1 += "10. Descripicion \n"
+            menu1 += "11. Descuento \n\n"
+            menu1 += "Elija una opcion"
+            opcion1 = parseInt(prompt(menu1))
+            switch (opcion1) {
+                case 1:
+                    let mostrar = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            autor: libros.autor,
+                            precio: libros.precio,
+                            editorial: libros.editorial
+                        }
+                    })
+                    console.table(mostrar)
+                    break;
+                case 2:
+                    let autor = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            autor: libros.autor,
+                            descripcion: libros.descripcion
+                        }
+                    })
+                    console.table(autor)
+                    break;
+                case 3:
+                    let paginas = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            paginas: libros.paginas,
+                            precio: libros.precio,
+                            formato: libros.formato
+                        }
+                    })
+                    console.table(paginas)
+                    break;
+                case 4:
+                    let ubicacion = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            ubicacion: libros.ubicacion,
+                            paginas: libros.paginas
+                        }
+                    })
+                    console.table(ubicacion)
+                    break;
+                case 5:
+                    let formato = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            autor: libros.autor,
+                            precio: libros.precio,
+                            formato: libros.formato
+                        }
+                    })
+                    console.table(formato)
+                    break;
+                case 6:
+                    let fecha = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            autor: libros.autor,
+                            precio: libros.precio
+                        }
+                    })
+                    console.table(fecha)
+                    break;
+                case 7:
+                    let peso = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            autor: libros.autor,
+                            precio: libros.precio,
+                            peso: libros.peso
+                        }
+                    })
+                    
+                    console.table(peso)
+                    break;
+                case 8:
+                    let idioma = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            idioma: libros.idioma,
+                            descripcion: libros.descripcion
+                        }
+                    })
+                    console.table(idioma)
+                    break;
+                case 9:
+                    let isbn = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            autor: libros.autor,
+                            precio: libros.idioma
+                        }
+                    })
+                    console.table(isbn)
+                    break;
+                case 10:
+                    let descripcion = libros.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            descripcion: libros.descripcion
+                        }
+                    })
+                    console.table(descripcion)
+                    break;
+                case 11:
+                    let descuento = libros.map(libros => {
+                        return {
+                            ...libros,
+                            descuento: "20%"
+                        }
+                    })
+                    
+                    let mostrardescuento = descuento.map(libros => {
+                        return {
+                            titulo: libros.titulo,
+                            autor: libros.autor,
+                            editorial: libros.editorial,
+                            precio: libros.precio,
+                            descuento: libros.descuento
+                        }
+                    })
+                    console.table(mostrardescuento)
+                    break;
+                default:
+                    console.log("Elija un numero valido")
+            }
             break;
-        default:
-            console.log("Opción inválida. Intente de nuevo.");
+            case 5:{
+                    console.log("Hasta luego");
+                 break;
+            }
+            default:"Elija un numero valido"
     }
-} while (opcion !== 4);
-
+} while (opcion !== 5);
 function eliminarLibro() {
     let tituloLibroEliminar = prompt("Ingrese el título del libro que desea eliminar: ");
     for (let i = 0; i < libros.length; i++) {
@@ -430,103 +573,30 @@ function mostrarLibros() {
         console.log(`Título: ${libros[i].titulo}\n Autor: ${libros[i].autor}\n Genero:${libros[i].genero}\n Idioma: ${libros[i].idioma}\n Precio: ${libros[i].precio}\n Formato: ${libros[i].formato}\n isbnn: ${libros[i].isbnn}\n Descripcion: ${libros[i].descripcion}\n Estado: ${libros[i].estado}\n Ubicacion ${libros[i].ubicacion}\n Fecha de publicacion ${libros[i].fecha_publicacion}\n Editorial: ${libros[i].editorial}\n Paginas: ${libros[i].paginas}\n Dimensiones${libros[i].dimensiones}\n Peso: ${libros[i].peso}`);
     }
 }
-
-const mostrar = libros.map(libros => {
+let mayora50 = libros.filter(libros=>{
+    return libros.precio > 50
+  })
+  //console.table(mayora50)
+  let librosorganizados=libros.map(libros => {
     return {
         titulo: libros.titulo,
         autor: libros.autor,
-        precio: libros.precio,
-        editorial: libros.editorial
-    }
-})
-console.table(mostrar)
-const autor = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        autor: libros.autor,
-        descripcion: libros.descripcion
-    }
-})
-console.table(autor)
-const paginas = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        paginas: libros.paginas,
-        precio: libros.precio,
-        formato: libros.formato
-    }
-})
-console.table(paginas)
-const ubicacion = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        ubicacion: libros.ubicacion,
+        editorial: libros.editorial,
         paginas: libros.paginas
     }
 })
-console.table(ubicacion)
-const formato = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        autor: libros.autor,
-        precio: libros.precio,
-        formato: libros.formato
-    }
-})
-console.table(formato)
-const fecha = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        autor: libros.autor,
-        precio: libros.precio
-    }
-})
-console.table(fecha)
+.filter(libros=>{
+    return libros.paginas > 500
+  })
+.sort ((a,b)=>b.paginas-a.paginas ) 
+//console.table(librosorganizados)
 
-const peso = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        autor: libros.autor,
-        precio: libros.precio,
-        peso: libros.peso
-    }
-})
-console.table(peso)
-const idioma = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        idioma: libros.idioma,
-        descripcion: libros.descripcion
-    }
-})
-console.table(idioma)
-const isbn = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        autor: libros.autor,
-        precio: libros.idioma
-    }
-})
-console.table(isbn)
-const descripcion = libros.map(libros => {
-    return {
-        titulo: libros.titulo,
-        descripcion: libros.descripcion
-    }
-})
-console.table(descripcion)
-const descuento = libros.map(libros => {
-    return {
-        ...libros,
-        descuento: "20%"
-    }
-})
 
-const mostrardescuento = descuento.map(libros => {
-    return {
-        titulo: libros.titulo,
-        descripcion: libros.descripcion,
-        descuento: libros.descuento
-    }
-})
-console.table(mostrardescuento)
+
+
+
+
+
+
+
+
