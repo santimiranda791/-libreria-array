@@ -544,6 +544,7 @@ do {
                         return libros.precio > 50
                     })
                     console.table(mayora50)
+                    break;
                 case 2:
                     let librosorganizados = libros.map(libros => {
                             return {
@@ -558,9 +559,11 @@ do {
                         })
                         .sort((a, b) => b.paginas - a.paginas)
                     console.table(librosorganizados)
+                    break;
                 case 3:
                     let paginasmayoramenor = libros.sort((a, b) => b.paginas - a.paginas)
                     console.table(paginasmayoramenor)
+                    break;
                 case 4:
                     let librosorganizadosprecio = libros.map(libros => {
                             return {
@@ -573,6 +576,7 @@ do {
                             return libros.precio > 11
                         })
                     console.table(librosorganizadosprecio)
+                    break;
                 case 5:
                     let librosorganizadospaginas = libros.map(libros => {
                             return {
@@ -586,6 +590,7 @@ do {
                             return libros.paginas < 100
                         })
                     console.table(librosorganizadospaginas)
+                    break;
                 case 6:
                     let librosorganizadosmayor20 = libros.map(libros => {
                             return {
