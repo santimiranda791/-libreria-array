@@ -364,7 +364,6 @@ let nuevoLiibro = {
     peso: 450 // gramos
 };
 libros.push(nuevoLiibro);
-let opcion = 0;
 do {
     menu = "Menú: \n \n";
     menu += "1. Agregar libro \n"
