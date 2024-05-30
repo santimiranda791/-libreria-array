@@ -535,7 +535,8 @@ do {
             menu2 += "3. Libros con las paginas de mayor a menor \n"
             menu2 += "4. Libros con precio mayor a 11 \n"
             menu2 += "5. Libros con menos de 100 paginas \n"
-            menu2 += "6. Libros con precio mayor a 20 \n \n"
+            menu2 += "6. Libros con precio mayor a 20 \n "
+            menu2 += "7. Libros por titulo,autor,editorial,paginas ordenadas mayor a menor \n \n"
             menu2 += "Elija una opcion"
             opcion2 = parseInt(prompt(menu2))
             switch (opcion2) {
@@ -604,6 +605,18 @@ do {
                         })
                         .sort((a,b)=>b.precio-a.precio)
                     console.table(librosorganizadosmayor20)
+            break;
+            case 7:
+                let librosorganizadospaginasmayor = libros.map(libros => {
+                    return {
+                        titulo: libros.titulo,
+                        autor: libros.autor,
+                        editorial: libros.editorial,
+                        paginas: libros.paginas
+                    }
+                })
+                .sort((a, b) => b.paginas - a.paginas)
+            console.table(librosorganizadospaginasmayor)
             }
             break
         case 6: {
@@ -654,13 +667,3 @@ function mostrarLibros() {
         console.log(`Título: ${libros[i].titulo}\n Autor: ${libros[i].autor}\n Genero:${libros[i].genero}\n Idioma: ${libros[i].idioma}\n Precio: ${libros[i].precio}\n Formato: ${libros[i].formato}\n isbnn: ${libros[i].isbnn}\n Descripcion: ${libros[i].descripcion}\n Estado: ${libros[i].estado}\n Ubicacion ${libros[i].ubicacion}\n Fecha de publicacion ${libros[i].fecha_publicacion}\n Editorial: ${libros[i].editorial}\n Paginas: ${libros[i].paginas}\n Dimensiones${libros[i].dimensiones}\n Peso: ${libros[i].peso}`);
     }
 }
-let librosorganizadospaginasmayor = libros.map(libros => {
-        return {
-            titulo: libros.titulo,
-            autor: libros.autor,
-            editorial: libros.editorial,
-            paginas: libros.paginas
-        }
-    })
-    .sort((a, b) => b.paginas - a.paginas)
-//console.table(librosorganizadospaginasmayor)
