@@ -602,6 +602,7 @@ do {
                         .filter(libros => {
                             return libros.precio > 20
                         })
+                        .sort((a,b)=>b.precio-a.precio)
                     console.table(librosorganizadosmayor20)
             }
             break
